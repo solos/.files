@@ -1,0 +1,45 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=DeaDBeeF
+GenericName=Audio Player
+GenericName[pt_BR]=Reprodutor de áudio
+GenericName[ru]=Аудио плеер
+Comment=Listen to music
+Comment[pt_BR]=Escute músicas
+Comment[ru]=Слушай музыку
+Exec=deadbeef %F
+MimeType=application/ogg;audio/x-vorbis+ogg;application/x-ogg;audio/mp3;audio/prs.sid;audio/x-flac;audio/mpeg;audio/x-mpeg;audio/x-mod;audio/x-it;audio/x-s3m;audio/x-xm;
+Categories=AudioVideo;Player;GTK;
+Terminal=false
+Type=Application
+Icon=deadbeef
+
+X-Ayatana-Desktop-Shortcuts=Play;Pause;Stop;Next;Prev
+
+X-GNOME-Autostart-enabled=false
+
+[Play Shortcut Group]
+Name=Play
+Exec=deadbeef --play
+TargetEnvironment=Unity
+
+[Pause Shortcut Group]
+Name=Pause
+Exec=deadbeef --pause
+TargetEnvironment=Unity
+
+[Stop Shortcut Group]
+Name=Stop
+Exec=deadbeef --stop
+TargetEnvironment=Unity
+
+[Next Shortcut Group]
+Name=Next
+Exec=deadbeef --next
+TargetEnvironment=Unity
+
+[Prev Shortcut Group]
+Name=Prev
+Exec=deadbeef --prev
+TargetEnvironment=Unity

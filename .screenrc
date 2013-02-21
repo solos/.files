@@ -1,0 +1,43 @@
+#termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+#hardstatus string "screen (%n: %t)"
+source /etc/screenrc
+altscreen off
+# hardstatus string '%{= kg}[ %H ][%{= kw}%= %?%-Lw%?%{R}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{W} %c %{g}]'
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+# hardstatus string "%{= bk} %{= wk} %-Lw%{bw}%n+%f %t%{wk}%{wk}%+Lw %=%{kw}%{= R}%{-}"
+# hardstatus string "%{= kw}  %H  %{wk} [%= %-Lw%{r}%n+%f %t%{k}%+Lw %= ] %{kw}  %c  %{kw}%{= R}%{-}"
+# hardstatus string "%{= rw}  %H  %{wk}  %-Lw%{r}%n+%f %t%{wk}%+Lw %=  %c%{kw}%{= R}%{-}"
+# caption always "%{= rw}  %H  %{wk} %h %= %-Lw%{r}%n+%f %t%{wk}%+Lw %{kw}%{= R}%{-}"
+# caption always "%{= rw}  %H  %{kw}-  %-Lw%{r}%n+%f %t%{kw}%+Lw%=%{= rw}%c  %{= R}%{-}"
+# caption always "%{= rw}  %H  %{wk}  %-Lw%{r}%n+%f %t%{wk}%+Lw %=  %c%{kw}%{= R}%{-}"
+# caption always "%{= KW} %l %{KW}%-Lw%{kW} %n+%f %t %{KW}%+Lw %=%c%{KW}%{= R}%{-}"
+# caption always "%{= kw} %-Lw%{G}%n+%f %t%{kw}%+Lw %=  %c%{kw}%{= R}%{-}"
+# caption always "%{= KW}  %h %=%{kw}%{= R}%{-}"
+
+# caption always "%{= wk}  %{wk}%-Lw%{rw}  %n+%f %t  %{wk}%+Lw %=%c%{kw}%{= R}%{-}"
+caption always "%{= wk}%{wk}%-Lw%{rw} %n+%f %t %{wk}%+Lw %=%c%{= R}%{-}"
+# caption always "%{= KW}  %{KW}%-Lw%{wk} %n+%f %t %{KW}%+Lw %=%{KW}%c%{KW}%{= R}%{-}"
+# caption always "%{= KW}  %{KW}%-Lw%{Wk} %n+%f %t %{KW}%+Lw %=%{KW}%c%{KW}%{= R}%{-}"
+
+shelltitle "$ |bash"
+defscrollback 50000
+startup_message off
+# escape ^aA
+escape ^aa
+
+termcapinfo xterm|xterms|xs|rxvt ti@:te@ # scroll bar support
+term rxvt # mouse support
+
+width 130
+height 40
+bindkey -k k; screen
+bindkey -k F1 prev
+bindkey -k F2 next
+bindkey -d -k kb stuff ^H
+bind x remove
+bind j eval "focus down"
+bind k eval "focus up"
+bind s eval "split" "focus down" "prev"
+vbell off
+shell -bash
+vbell off

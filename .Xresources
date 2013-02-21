@@ -1,0 +1,86 @@
+! x config 
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.antialias: true
+Xcursor.theme: DMZ-White
+Xft.hintstyle: hintslight
+
+! xterm config
+
+! general settings
+xterm*termName: xterm-256color
+xterm*geometry: 80x24
+xterm*saveLines: 1024
+xterm*scrollBar: false
+xterm*loginshell: true
+xterm*background: #cce8cf
+xterm*foreground: black
+xterm*cursorBlink: false
+
+! fonts and encoding
+xterm*utf8: true
+xterm*locale: true
+xterm*utf8Title: true
+xterm*renderFont: true
+xterm*scaleHeight: 1.1
+xterm*preeditType: Root
+xterm*xftAntialias: true
+xterm*faceName: Inconsolata:size=18
+xterm*faceNameDoublesize: WenQuanYi Micro Hei:size=18
+! trim trailing spaces
+xterm*trimSelection: true
+
+! fix alt-key inputting
+xterm*eightBitInput: false
+xterm*metaSendsEscape: true
+
+! copy and paste with clipboard
+xterm*translations: #override \
+Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+
+! allow selecting email/url by double-click
+xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+
+! colours for hybrid.vim (copied from Tomorrow-Night)
+#define t_background #1d1f21
+#define t_current_line #282a2e
+#define t_selection #373b41
+#define t_foreground #c5c8c6
+#define t_comment #969896
+#define t_red #cc6666
+#define t_orange #de935f
+#define t_yellow #f0c674
+#define t_green #b5bd68
+#define t_aqua #8abeb7
+#define t_blue #81a2be
+#define t_purple #b294bb
+
+! terminal colours
+xterm*background: t_background
+xterm*foreground: t_comment
+! black
+xterm*color0: t_current_line
+xterm*color8: t_selection
+! red
+xterm*color1: #A54242
+xterm*color9: t_red
+! green
+xterm*color2: #8C9440
+xterm*color10: t_green
+! yellow
+xterm*color3: t_orange
+xterm*color11: t_yellow
+! blue
+xterm*color4: #5F819D
+xterm*color12: t_blue
+! magenta
+xterm*color5: #85678F
+xterm*color13: t_purple
+! cyan
+xterm*color6: #5E8D87
+xterm*color14: t_aqua
+! white
+xterm*color7: t_comment
+xterm*color15: t_foreground

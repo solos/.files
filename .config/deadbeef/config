@@ -1,0 +1,68 @@
+cli_add_playlist_name Default
+cli_add_to_specific_playlist 1
+converter.dsp_preset -1
+converter.encoder_preset 1
+converter.lastdir file:///home/solos/music/beyond/flac
+converter.output_file suiyuewusheng.flac
+converter.output_folder /home/solos/music/beyond/flac
+converter.output_format 0
+converter.overwrite_action 0
+deadbeef_version 0.5.1
+filechooser.lastdir file:///home/solos/music/beyond
+gtkui.headers.visible 1
+gtkui.mmb_delete_playlist 1
+gtkui.statusbar.visible 1
+gtkui.tabs.visible 1
+gtkui.tabscroll 0
+gtkui.titlebar_playing %a - %t - DeaDBeeF-%V
+gtkui.titlebar_stopped DeaDBeeF-%V
+gui_plugin GTK2
+ignore_archives 1
+lastfm.disable_np 0
+lastfm.enable 1
+lastfm.login jht360
+lastfm.password #*sierivy
+lastfm.scrobbler_url http://post.audioscrobbler.com
+mainwin.geometry.h 441
+mainwin.geometry.maximized 1
+mainwin.geometry.w 659
+mainwin.geometry.x 664
+mainwin.geometry.y 75
+network.proxy.port 8080
+network.proxy.type HTTP
+notify.albumart 1
+notify.albumart_size 64
+notify.enable 1
+notify.format %t
+notify.format_content %a - %b
+playback.loop 0
+playback.order 0
+playback.volume -5.714283
+playlist.column.00 "正在播放" "" 1 50 0
+playlist.column.01 "艺人 / 专辑" "%a - %b" -1 412 0
+playlist.column.02 "音轨号" "%n" -1 85 1
+playlist.column.03 "标题" "%t" -1 298 0
+playlist.column.04 "时长" "%l" -1 50 0
+playlist.current 0
+playlist.cursor.0 9
+playlist.cursor.1 0
+playlist.scroll.0 0
+playlist.scroll.1 20
+playlist.scroll.followplayback 0
+playlist.tab.00 默认
+playlist.tab.01 Default
+prefwin.geometry.h 452
+prefwin.geometry.w 680
+prefwin.geometry.x 623
+prefwin.geometry.y 325
+replaygain_mode 0
+replaygain_scale 1
+resume.paused 0
+resume.playlist 0
+resume.position 5.5206208
+resume.track 9
+streamer.8_to_16 1
+trkproperties.geometry.h 400
+trkproperties.geometry.w 836
+trkproperties.geometry.x 1022
+trkproperties.geometry.y 340

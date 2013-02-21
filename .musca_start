@@ -1,0 +1,99 @@
+exec musca
+
+startup .musca_start
+
+border_focus yellow
+border_width    0
+
+# focus on the new frame after split
+frame_split_focus new
+
+# close the un-fucusd & empty group
+group_close_empty 1
+
+#quit musca
+bind on Mod4+Shift+q quit
+
+# 按Mod4 + 数字键快速地切换工作组
+bind on Mod4+1 use 0
+bind on Mod4+2 use 1
+bind on Mod4+3 use 2
+bind on Mod4+4 use 3
+bind on Mod4+5 use 4
+bind on Mod4+6 use 5
+bind on Mod4+7 use 6
+bind on Mod4+8 use 7
+bind on Mod4+9 use 8
+bind on Mod4+0 use 9
+
+bind on Mod4+q exec musca-off
+bind on Mod4+i exec firefox
+bind on Mod4+f exec thunar
+
+bind on Mod1+Left slide left
+bind on Mod1+Right slide right
+bind on Mod1+Up slide up
+bind on Mod1+Down slide down
+
+bind on Mod4+Shift+1 move 0
+bind on Mod4+Shift+2 move 1
+bind on Mod4+Shift+3 move 2
+bind on Mod4+Shift+4 move 3
+bind on Mod4+Shift+5 move 4
+bind on Mod4+Shift+6 move 5
+bind on Mod4+Shift+7 move 6
+bind on Mod4+Shift+8 move 7
+bind on Mod4+Shift+9 move 8
+bind on Mod4+Shift+0 move 9
+
+bind on Mod4+Shift+h swap left
+bind on Mod4+Shift+l swap right
+bind on Mod4+Shift+k swap up
+bind on Mod4+Shift+j swap down
+
+bind on XF86AudioRaiseVolume exec amixer sset Master,0 5%+
+bind on XF86AudioLowerVolume exec amixer sset Master,0 5%-
+
+frame_min_wh    150
+frame_resize    10
+stack_follow_mouse  1
+frame_display_hidden    1
+frame_split_focus   current
+
+pad 0 0 40 40
+hook on ^add pad 0 0 40 40
+# 使用xft字体
+use_xft yes
+# 默认的xft字体
+xftfont wqy:size=16
+# Text alpha when using Xft
+xftalpha 1.0
+
+# 每8秒更新一次
+update_interval 8.0
+
+# 更新的次数，设为0是永远更新
+total_run_times 0
+
+# 使用桌面，不用自己的窗口
+own_window no
+
+add 1
+add 2
+add 3
+add 4
+add 5
+add 6
+add 7
+add 8
+add 9
+add 0
+
+use 0
+load .mdefault
+manage off tint2
+tint2 &
+parcellite &
+#xfdesktop &
+#xfce4-panel &
+xmodmap ~/.xmodmap 

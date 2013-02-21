@@ -1,0 +1,25 @@
+_server.py() 
+{
+    local cur prev opts base
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    #
+    #  The first options should be a python config file
+    #
+
+    if [ $COMP_CWORD -eq 1 ]; then
+        COMPREPLY=( $(compgen -W "`ls -1 *.conf.py 2>/dev/null`" -- ${cur}) )
+        return 0
+    fi
+
+    #
+    #  Complete the command
+    #
+    opts="startserver shell ishell closurecompiler celeryd help movefiles install script"
+
+   COMPREPLY=($(compgen -W "${opts}" -- ${cur}))  
+   return 0
+}
+complete -F _server.py server.py

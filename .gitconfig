@@ -1,0 +1,11 @@
+[user]
+	name = solos
+	email = lxl1217@gmail.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 434x285+0+26
+	history-view-vpane-position = 677
+	main-window-view = HistoryView
+	file-view-vpane-position = 848

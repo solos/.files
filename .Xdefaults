@@ -1,0 +1,12 @@
+XTerm*fontMenu*fontdefault*Label: Default
+XTerm*faceName: Bitstream Vera Sans Mono Roman
+XTerm*faceNameDoublesize: WenQuanYi Bitmap Song
+XTerm*faceSize: 16
+
+XTerm*cjkWidth: true
+XTerm*mkWidth: true
+XTerm*jumpScroll: true
+XTerm*SaveLines: 1000
+XTerm*background: #CCE8CF
+XTerm*foreground: #CCE8CF
+XTerm*scrollbar: true
