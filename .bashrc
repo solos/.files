@@ -126,3 +126,4 @@ LC_ALL=zh_CN.UTF8
 xmodmap ~/.xmodmap
 
 PS1='solos@solos.so:\w '
+alias x='xrdb ~/.Xresources'

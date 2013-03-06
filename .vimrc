@@ -40,8 +40,10 @@ set showmatch
 set incsearch
 set hlsearch
 set nocp
+"colorscheme desert
 "let g:neocomplcache_enable_at_startup = 1
 syntax on
+syntax enable
 
 "在插入模式中使用Ctrl+v粘贴全局剪贴板内容
 inoremap <C-v> <esc>:set paste<cr>mui<C-R>+<esc>mv'uV'v=:set nopaste<cr>
@@ -63,10 +65,13 @@ let python_no_exception_highlight = 1
 let python_no_number_highlight = 1 
 let python_space_error_highlight = 1
 
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-
-let g:EasyMotion_leader_key = 'f'
+"let g:hybrid_use_Xresources = 1
+"colorscheme hybrid
+set background=dark
+colorscheme solarized
 
 au BufWinLeave ?* mkview
 au BufWinEnter ?* silent loadview
+
+"let g:Powerline_symbols = 'fancy'
+"
