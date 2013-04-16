@@ -90,10 +90,9 @@ add 9
 add 0
 
 use 0
-load .mdefault
+exec parcellite &
+exec xmodmap ~/.xmodmap &
 manage off tint2
-tint2 &
-parcellite &
+#exec tint2 &
 #xfdesktop &
 #xfce4-panel &
-xmodmap ~/.xmodmap 
