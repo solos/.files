@@ -16,7 +16,7 @@ xterm*loginshell: true
 xterm*background: #002B36
 xterm*foreground: #657b83
 xterm*cursorBlink: false
-!xterm*dynamicColors: true
+xterm*dynamicColors: true
 xterm*.utf8: 1
 
 ! fonts and encoding
@@ -27,7 +27,7 @@ xterm*renderFont: true
 xterm*scaleHeight: 1.1
 xterm*preeditType: Root
 xterm*xftAntialias: true
-xterm*faceName: Inconsolata\ for\ Powerline:size=18;
+xterm*faceName: Inconsolata for Powerline:size=18;
 xterm*faceNameDoublesize: WenQuanYi Micro Hei:size=18
 ! trim trailing spaces
 xterm*trimSelection: true
@@ -94,33 +94,33 @@ xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35
 *pointerColorForeground:S_base1
 
 !! black dark/light
-*color0:                S_base02
-*color8:                S_base03
+xterm*color0:                S_base02
+xterm*color8:                S_base03
 
 !! red dark/light
-*color1:                S_red
-*color9:                S_orange
+xterm*color1:                S_red
+xterm*color9:                S_orange
 
 !! green dark/light
-*color2:                S_green
-*color10:               S_base01
+xterm*color2:                S_green
+xterm*color10:               S_base01
 
 !! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
+xterm*color3:                S_yellow
+xterm*color11:               S_base00
 
 !! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
+xterm*color4:                S_blue
+xterm*color12:               S_base0
 
 !! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
+xterm*color5:                S_magenta
+xterm*color13:               S_violet
 
 !! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
+xterm*color6:                S_cyan
+xterm*color14:               S_base1
 
 !! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+xterm*color7:                S_base2
+xterm*color15:               S_base3

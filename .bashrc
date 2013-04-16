@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-PS1='`a=$?;if [ $a -ne 0 ]; then echo -n -e "\[\e[01;32;41m\]{$a}"; fi`\[\033[01;32m\]\u\[\033[00m\]\[\033[00;37m\]@\h\[\033[00m\] \[\033[01;34m\]\w`b=$(git symbolic-ref HEAD 2> /dev/null | cut -b 12-); [[ "$b" != "" ]] && echo -n -e "\[\e[33;00m\]($b)\[\033[01;32m\]\[\e[00m\]"`\[\033[01;34m\] $ \[\e[00m\]'
-
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -51,25 +49,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+if [ -x /usr/bin/dircolors ] && [ -f ~/.dircolors/dircolors.256dark ]; then
+    eval `dircolors .dircolors/dircolors.256dark`
 fi
 
 # vi mode
@@ -123,7 +107,16 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/
 
 LC_ALL=zh_CN.UTF8
-xmodmap ~/.xmodmap
 
-PS1='solos@solos.so:\w '
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+if [ -f ~/.xmodmap ]; then
+    xmodmap ~/.xmodmap
+fi
+
+if [ -f ~/.autojump/etc/profile.d/autojump.sh ]; then
+    [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+fi
+
+function _update_ps1() {
+   export PS1="$(~/.powerline-shell.py $?)"
+}
+export PROMPT_COMMAND="_update_ps1"
