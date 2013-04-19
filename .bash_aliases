@@ -36,3 +36,5 @@ alias l='ls -CF'
 alias cle='clear'
 alias nau='nautilus'
 alias x='xrdb ~/.Xresources'
+alias t='python ~/.t.py --task-dir ~/.tasks --list tasks'
+alias gitc="git log --author='solos' --pretty=tformat: --numstat | gawk '{add += \$1 ; subs += \$2 ; loc += \$1 - \$2;} END {printf \"added lines: %s, removed lines: %s, total lines: %s\n\",add,subs,loc}'"
