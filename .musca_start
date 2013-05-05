@@ -94,6 +94,7 @@ add 9
 add 0
 
 use 0
+exec fcitx -d &
 exec parcellite &
 exec xmodmap ~/.xmodmap &
 manage off tint2
