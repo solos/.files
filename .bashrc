@@ -101,12 +101,12 @@ export PATH=/usr/local/nodejs/bin:${PATH}
 export PATH=/usr/local/snappy/:${PATH}
 export PATH=/usr/local/gearman/bin/:${PATH}
 export PATH=/usr/local/mongodb/bin/:${PATH}
+export PATH=/usr/local/fcitx/bin/:${PATH}
 
 export GOROOT=/home/solos/dev/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/
 
-LC_ALL=zh_CN.UTF8
 
 if [ -f ~/.xmodmap ]; then
     xmodmap ~/.xmodmap
@@ -120,3 +120,5 @@ function _update_ps1() {
    export PS1="$(~/.powerline-shell.py $?)"
 }
 export PROMPT_COMMAND="_update_ps1"
+export LC_ALL="zh_CN.utf8"
+export LANG="zh_CN.utf8"
