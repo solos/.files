@@ -53,7 +53,7 @@ unset color_prompt force_color_prompt
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ] && [ -f ~/.dircolors/dircolors.256dark ]; then
-    eval `dircolors .dircolors/dircolors.256dark`
+    eval `dircolors ~/.dircolors/dircolors.256dark`
 fi
 
 # vi mode
@@ -97,11 +97,15 @@ export PATH=/sbin:${PATH}
 export PATH=/usr/local/bin:${PATH}
 export PATH=/usr/local/mysql/bin:${PATH}
 export PATH=/usr/local/snmp/bin:${PATH}
+export PATH=/usr/local/snmp/include:${PATH}
+export PATH=/usr/local/snmp/sbin:${PATH}
 export PATH=/usr/local/nodejs/bin:${PATH}
 export PATH=/usr/local/snappy/:${PATH}
 export PATH=/usr/local/gearman/bin/:${PATH}
 export PATH=/usr/local/mongodb/bin/:${PATH}
 export PATH=/usr/local/fcitx/bin/:${PATH}
+export PATH=/opt/texlive/2012/bin/x86_64-linux:${PATH}
+export PATH=/usr/local/lib/:${PATH}
 
 export GOROOT=/home/solos/dev/go
 export PATH=$PATH:$GOROOT/bin
