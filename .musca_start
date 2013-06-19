@@ -35,6 +35,11 @@ bind on Mod1+Right slide right
 bind on Mod1+Up slide up
 bind on Mod1+Down slide down
 
+bind on Mod4+Shift+h focus left
+bind on Mod4+Shift+j focus down
+bind on Mod4+Shift+k focus up
+bind on Mod4+Shift+l focus right
+
 bind on Mod4+Shift+1 move 0
 bind on Mod4+Shift+2 move 1
 bind on Mod4+Shift+3 move 2
