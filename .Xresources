@@ -27,7 +27,7 @@ xterm*renderFont: true
 xterm*scaleHeight: 1.1
 xterm*preeditType: Root
 xterm*xftAntialias: true
-xterm*faceName: Inconsolata for Powerline:size=18;
+xterm*faceName: Inconsolata:size=18;
 xterm*faceNameDoublesize: WenQuanYi Micro Hei:size=18
 ! trim trailing spaces
 xterm*trimSelection: true
@@ -126,3 +126,9 @@ xterm*color14:               S_base1
 !! white dark/light
 xterm*color7:                S_base2
 xterm*color15:               S_base3
+
+*VT100*translations: #override \n\ 
+Shift <KeyPress> Insert:insert-selection(CLIPBOARD, CUT_BUFFER1) \n\ 
+~Shift~Ctrl<Btn2Up>: insert-selection(CLIPBOARD, CUT_BUFFER1) \n\ 
+~Shift<BtnUp>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER1) 
+
