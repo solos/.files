@@ -51,10 +51,10 @@ bind on Mod4+Shift+8 move 7
 bind on Mod4+Shift+9 move 8
 bind on Mod4+Shift+0 move 9
 
-bind on Mod1+Shift+h swap left
-bind on Mod1+Shift+l swap right
-bind on Mod1+Shift+k swap up
-bind on Mod1+Shift+j swap down
+bind on Mod1+Mod4+h swap left
+bind on Mod1+Mod4+l swap right
+bind on Mod1+Mod4+k swap up
+bind on Mod1+Mod4+j swap down
 
 # 切换相邻的虚拟桌面
 bind on Mod4+n use (next)
