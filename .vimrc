@@ -40,7 +40,6 @@ set showmatch
 set incsearch
 set hlsearch
 set nocp
-"colorscheme desert
 "let g:neocomplcache_enable_at_startup = 1
 syntax on
 syntax enable
@@ -51,6 +50,13 @@ inoremap <C-v> <esc>:set paste<cr>mui<C-R>+<esc>mv'uV'v=:set nopaste<cr>
 vnoremap <C-c> "+y
 "在Visual模式中使用Ctrl+x剪切内容到全局剪贴板
 vnoremap <C-x> "+x
+
+"在插入模式中使用Shift+v粘贴缓冲区内容
+inoremap <S-v> <esc>:set paste<cr>mui<C-R>*<esc>mv'uV'v=:set nopaste<cr>
+"在Visual模式中使用Shift+c复制内容到缓冲区
+vnoremap <S-c> "*y
+"在Visual模式中使用Shift+x剪切内容到缓冲区
+vnoremap <S-x> "*x
 
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
@@ -65,13 +71,33 @@ let python_no_exception_highlight = 1
 let python_no_number_highlight = 1 
 let python_space_error_highlight = 1
 
-"let g:hybrid_use_Xresources = 1
-"colorscheme hybrid
+"let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
 au BufWinLeave ?* mkview
 au BufWinEnter ?* silent loadview
 
-"let g:Powerline_symbols = 'fancy'
-"
+execute pathogen#infect()
+
+
+let g:input_toggle = 1
+function! Fcitx2en()
+   let s:input_status = system("fcitx-remote")
+   if s:input_status == 2
+      let g:input_toggle = 1
+      let l:a = system("fcitx-remote -c")
+   endif
+endfunction
+
+function! Fcitx2zh()
+   let s:input_status = system("fcitx-remote")
+   if s:input_status != 2 && g:input_toggle == 1
+      let l:a = system("fcitx-remote -o")
+      let g:input_toggle = 0
+   endif
+endfunction
+
+set timeoutlen=150
+autocmd InsertLeave * call Fcitx2en()
+"autocmd InsertEnter * call Fcitx2zh()

@@ -35,6 +35,11 @@ bind on Mod1+Right slide right
 bind on Mod1+Up slide up
 bind on Mod1+Down slide down
 
+bind on Mod4+Shift+h focus left
+bind on Mod4+Shift+j focus down
+bind on Mod4+Shift+k focus up
+bind on Mod4+Shift+l focus right
+
 bind on Mod4+Shift+1 move 0
 bind on Mod4+Shift+2 move 1
 bind on Mod4+Shift+3 move 2
@@ -46,10 +51,14 @@ bind on Mod4+Shift+8 move 7
 bind on Mod4+Shift+9 move 8
 bind on Mod4+Shift+0 move 9
 
-bind on Mod4+Shift+h swap left
-bind on Mod4+Shift+l swap right
-bind on Mod4+Shift+k swap up
-bind on Mod4+Shift+j swap down
+bind on Mod1+Mod4+h swap left
+bind on Mod1+Mod4+l swap right
+bind on Mod1+Mod4+k swap up
+bind on Mod1+Mod4+j swap down
+
+# 切换相邻的虚拟桌面
+bind on Mod4+n use (next)
+bind on Mod4+p use (prev)
 
 bind on XF86AudioRaiseVolume exec amixer sset Master,0 5%+
 bind on XF86AudioLowerVolume exec amixer sset Master,0 5%-
@@ -90,10 +99,38 @@ add 9
 add 0
 
 use 0
-load .mdefault
+exec fcitx -d &
+exec parcellite &
+exec xmodmap ~/.xmodmap &
 manage off tint2
-tint2 &
-parcellite &
+manage off conky
+manage off fcitx
+manage off QEMU
+manage off xmessage
+
+#exec conky
+#exec stalonetray
+#exec xbindkeys
+#exec feh --bg-scale ~/pic/wall/sailor.starrynight.jpg
+#exec xmobar
+
+# unclutter 用来隐藏 X 鼠标/光标
+#exec unclutter -idle 2
+
+#exec tint2 &
 #xfdesktop &
 #xfce4-panel &
-xmodmap ~/.xmodmap 
+
+
+# [ notify ]# {{{
+#--------------------------------------------
+
+# 使用 xmessage 作为 提示 对话框，设置显示时间为 2s 之后自动关闭
+# 要使 xmessage 居中生效，XXX 需要 manage off xmessage
+#set notify xmessage -center -timeout 1 -file -
+#set notify xmessage -center -file -
+
+#silent set notify echo "$(cat)" | dzen2 -p 4 -bg \#D00 -fg white -fn '-misc-fixed-medium-r-normal--15-*-*-*-*-*-iso10646'
+
+# 需要安装 notify-send 软件包 # From : man musca
+#set notify notify-send -t 3000 Musca "$(cat)"
