@@ -1,0 +1,10 @@
+T 1371391424 19*	19Now talking on #debian
+T 1371391424 29*	29Topic for #debian 29is: wheezy (7.1) released: /msg dpkg squeeze->wheezy | /msg dpkg 7.1 | NO FLOOD: /msg dpkg paste | /msg bots NOT people | offtopic: #debian-offtopic | testing/unstable: #debian-next (irc.oftc.net) | FAQ: http://deb.li/IRCFAQ
+T 1371391424 29*	29Topic for #debian 29set by themill!~stuart@themill.user.oftc.net 29at Sun Jun 16 12:56:23 2013
+T 1371391426 Python interface unloaded
+T 1371391426 Tcl interface unloaded
+T 1371391528 19*	19Now talking on #debian
+T 1371391528 29*	29Topic for #debian 29is: wheezy (7.1) released: /msg dpkg squeeze->wheezy | /msg dpkg 7.1 | NO FLOOD: /msg dpkg paste | /msg bots NOT people | offtopic: #debian-offtopic | testing/unstable: #debian-next (irc.oftc.net) | FAQ: http://deb.li/IRCFAQ
+T 1371391528 29*	29Topic for #debian 29set by themill!~stuart@themill.user.oftc.net 29at Sun Jun 16 12:56:23 2013
+T 1371391568 Python interface unloaded
+T 1371391568 Tcl interface unloaded
