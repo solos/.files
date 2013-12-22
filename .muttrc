@@ -1,0 +1,24 @@
+set from = "user@gmail.com"
+set realname = "solos"
+set imap_user = "user@gmail.com"
+set imap_pass = "pass"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=/etc/ssl/certs/ca-certificates.crt
+set smtp_url="smtp://user@smtp.gmail.com:587/"
+set smtp_pass="pass"
+set move=no
+set sort=threads
+set sort_aux=reverse-last-date
+set ascii_chars=yes
+set include
+set pager_stop
+set record="~/.mutt/=sent-mail-'date +%y-%m'"
+set edit_headers=no
+set pager_index_lines=5
+set editor="vim"
+set indent_str="> "
+auto_view text/html

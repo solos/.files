@@ -117,7 +117,7 @@ manage off xmessage
 # unclutter 用来隐藏 X 鼠标/光标
 #exec unclutter -idle 2
 
-#exec tint2 &
+exec tint2 &
 #xfdesktop &
 #xfce4-panel &
 

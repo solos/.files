@@ -107,7 +107,8 @@ export PATH=/usr/local/fcitx/bin/:${PATH}
 export PATH=/opt/texlive/2012/bin/x86_64-linux:${PATH}
 export PATH=/usr/local/lib/:${PATH}
 
-export GOROOT=/home/solos/dev/go
+export GOROOT=/home/solos/go
+export GOPATH=/home/solos/go/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/usr/local/
 
