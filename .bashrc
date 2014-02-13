@@ -80,6 +80,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 FCEDIT=/usr/bin/vim
+export GIT_EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+export EDITOR=/usr/bin/vim
 
 # fcitx
 export GTK_IM_MODULE=fcitx
