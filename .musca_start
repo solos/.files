@@ -99,7 +99,10 @@ add 9
 add 0
 
 use 0
-exec fcitx -d &
+exec /usr/local/fcitx/bin/fcitx -d &
+exec /usr/local/bin/sslocal -c /home/solos/.shadowsocks/config.json &
+exec /usr/bin/python /home/solos/.dropbox.py start &
+exec numlockx &
 exec parcellite &
 exec xmodmap ~/.xmodmap &
 manage off tint2
