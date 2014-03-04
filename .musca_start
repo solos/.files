@@ -35,6 +35,11 @@ bind on Mod1+Right slide right
 bind on Mod1+Up slide up
 bind on Mod1+Down slide down
 
+bind on Mod4+Shift+h focus left
+bind on Mod4+Shift+j focus down
+bind on Mod4+Shift+k focus up
+bind on Mod4+Shift+l focus right
+
 bind on Mod4+Shift+1 move 0
 bind on Mod4+Shift+2 move 1
 bind on Mod4+Shift+3 move 2
@@ -46,10 +51,10 @@ bind on Mod4+Shift+8 move 7
 bind on Mod4+Shift+9 move 8
 bind on Mod4+Shift+0 move 9
 
-bind on Mod4+Shift+h swap left
-bind on Mod4+Shift+l swap right
-bind on Mod4+Shift+k swap up
-bind on Mod4+Shift+j swap down
+bind on Mod1+Mod4+h swap left
+bind on Mod1+Mod4+l swap right
+bind on Mod1+Mod4+k swap up
+bind on Mod1+Mod4+j swap down
 
 # 切换相邻的虚拟桌面
 bind on Mod4+n use (next)
@@ -94,7 +99,10 @@ add 9
 add 0
 
 use 0
-exec fcitx -d &
+exec /usr/local/fcitx/bin/fcitx -d &
+exec /usr/local/bin/sslocal -c /home/solos/.shadowsocks/config.json &
+exec /usr/bin/python /home/solos/.dropbox.py start &
+exec numlockx &
 exec parcellite &
 exec xmodmap ~/.xmodmap &
 manage off tint2
@@ -112,7 +120,7 @@ manage off xmessage
 # unclutter 用来隐藏 X 鼠标/光标
 #exec unclutter -idle 2
 
-#exec tint2 &
+exec tint2 &
 #xfdesktop &
 #xfce4-panel &
 
