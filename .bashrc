@@ -107,6 +107,7 @@ export PATH=/usr/local/snappy/:${PATH}
 export PATH=/usr/local/gearman/bin/:${PATH}
 export PATH=/usr/local/mongodb/bin/:${PATH}
 export PATH=/usr/local/fcitx/bin/:${PATH}
+export PATH=/usr/local/scheme/bin/:${PATH}
 export PATH=/opt/texlive/2012/bin/x86_64-linux:${PATH}
 export PATH=/usr/local/lib/:${PATH}
 
