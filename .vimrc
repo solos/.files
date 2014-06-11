@@ -52,11 +52,11 @@ vnoremap <C-c> "+y
 vnoremap <C-x> "+x
 
 "在插入模式中使用Shift+v粘贴缓冲区内容
-inoremap <S-v> <esc>:set paste<cr>mui<C-R>*<esc>mv'uV'v=:set nopaste<cr>
+inoremap <C-S-v> <esc>:set paste<cr>mui<C-R>*<esc>mv'uV'v=:set nopaste<cr>
 "在Visual模式中使用Shift+c复制内容到缓冲区
-vnoremap <S-c> "*y
+vnoremap <C-S-c> "*y
 "在Visual模式中使用Shift+x剪切内容到缓冲区
-vnoremap <S-x> "*x
+vnoremap <C-S-x> "*x
 
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
