@@ -101,3 +101,6 @@ endfunction
 set timeoutlen=150
 autocmd InsertLeave * call Fcitx2en()
 "autocmd InsertEnter * call Fcitx2zh()
+
+set rtp+=$GOROOT/misc/vim
+filetype plugin on
