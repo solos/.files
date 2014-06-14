@@ -98,9 +98,16 @@ function! Fcitx2zh()
    endif
 endfunction
 
-set timeoutlen=150
-autocmd InsertLeave * call Fcitx2en()
+"set timeoutlen=150
+"autocmd InsertLeave * call Fcitx2en()
 "autocmd InsertEnter * call Fcitx2zh()
 
 set rtp+=$GOROOT/misc/vim
 filetype plugin on
+
+let g:vimwiki_list = [{'path': '~/vimwiki',
+\ 'path_html': '~/vimwiki/html/',
+\ 'template_path': '~/vimwiki/templates',
+\ 'template_default': 'default.wiki'}]
+
+let mapleader="\\"
